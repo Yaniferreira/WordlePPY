@@ -1,11 +1,13 @@
 let intentos = 6;
-let palabra = "APPLE";
+let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH',"Smile", "Tiger", "Apple", "Dance", "Water"]
+let palabra;
 window.addEventListener('load', init)
 const button = document.getElementById("guess-button");
 const input = document.getElementById("guess-input");
 const valor = input.value;
 function init() {
     console.log('Esto se ejecuta solo cuando se carga la pagina web')
+    palabra = diccionario[Math.floor(Math.random() * diccionario.length)];
 }
 function intentar() {
     const INTENTO = leerIntento();
@@ -32,7 +34,6 @@ function intentar() {
         ROW.appendChild(SPAN)
     }
     GRID.appendChild(ROW)
-
     intentos--
     if (intentos == 0) {
         terminar("<h1>PERDISTE!😖</h1>")
@@ -48,7 +49,7 @@ function leerIntento() {
 function terminar(mensaje){
     const INPUT = document.getElementById("guess-input");
     INPUT.disabled = true;
-    BOTON.disabled = true;
+    button.disabled = true;
     let contenedor = document.getElementById('guesses');
     contenedor.innerHTML = mensaje;
 }
