@@ -1,5 +1,5 @@
 let intentos = 5;
-let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH', "Smile", "Tiger", "Apple", "Dance", "Water"]
+let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH', "SMILE", "TIGER", "MUSIC", "DANCE", "WATER"]
 let palabra;
 window.addEventListener('load', init)
 const button = document.getElementById("guess-button");
